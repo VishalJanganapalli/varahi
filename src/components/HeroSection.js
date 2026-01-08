@@ -10,7 +10,7 @@ function HeroSection() {
       minHeight: { xs: 400, md: 420 },
       background: 'linear-gradient(90deg, #fff 60%, #FFF3E6 100%)',
       py: { xs: 4, md: 8 },
-      px: { xs: 2, md: 8 },
+     
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -18,15 +18,15 @@ function HeroSection() {
       <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center" justifyContent="center">
         {/* Left: Image */}
         <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-         <img
-              src={require('../assets/hero-sec-img.png')}
-              alt="Hero Section"
-              style={{ width: '100%', height: 'auto', borderRadius: 12 }}
-            />
+          <img
+            src={require('../assets/hero-sec-img.png')}
+            alt="Hero Section"
+            style={{ width: '100%', height: 'auto', borderRadius: 12 }}
+          />
         </Grid>
         {/* Right: Content */}
         <Grid size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'flex-start' }, justifyContent: 'center', height: '100%' }}>
-          <Typography variant="h3" fontWeight={700} fontStyle={'italic'} color="initial">Complete <span style={{color:'#FF6600'}}>Home Construction</span> Solutions</Typography>
+          <Typography variant="h3" fontWeight={700} fontStyle={'italic'} color="initial">Complete <span style={{ color: '#FF6600' }}>Home Construction</span> Solutions</Typography>
           <Typography
             sx={{
               color: '#222',
