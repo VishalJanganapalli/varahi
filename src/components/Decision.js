@@ -28,7 +28,7 @@ const Decision = () => {
                  {
                     data.map((item)=>{
                         return (
-                            <Grid size={{xs:12, sm:6, md:3}} sx={{border:'1px solid #FF660069', textAlign:'center', borderRadius:'15px', padding:'20px ', backgroundColor:'#292929'}}>
+                            <Grid size={{xs:12, sm:6, md:3}} sx={{border:'1px solid #FF660069', textAlign:'center', borderRadius:'15px', padding:'20px ', backgroundColor:'#292929', ":hover":{boxShadow:'0px 0px 20px rgba(196, 108, 27, 0.77)'}}}>
                                 <Typography variant="h5" fontWeight={600} color="#ff6a00">{item.count}</Typography>
                                 <Typography variant="body1" color="#ff6a00">{item.title}</Typography>
                             </Grid>

@@ -1,17 +1,22 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
-import avaliableBg from '../assets/avaliablebg.png'
+import avaliableBg from '../assets/bg.png'
 
 const Avaliable = () => {
+    const openConsultationForm = () => {
+        window.dispatchEvent(
+            new CustomEvent('open-consultation-form', {
+                detail: { source: 'avaliable' }
+            })
+        )
+    }
+
     return (
         <Box>
             <Box
                 sx={{
                     height: { xs: 300, md: 350 },
-                    backgroundImage: `
-          linear-gradient(rgba(255, 140, 0, 0.69), rgba(255, 140, 0, 0.69)),
-          url(${avaliableBg})
-        `,
+                    backgroundImage: `url(${avaliableBg}) `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     display: "flex",
@@ -45,6 +50,7 @@ const Avaliable = () => {
 
                     <Button
                         variant="contained"
+                        onClick={openConsultationForm}
                         sx={{
                             backgroundColor: "#ff6a00ff",
                             px: 3,

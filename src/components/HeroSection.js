@@ -4,6 +4,14 @@ import React from 'react';
 import { Box, Grid, Typography, Button, Stack } from '@mui/material';
 
 function HeroSection() {
+  const openConsultationForm = () => {
+    window.dispatchEvent(
+      new CustomEvent('open-consultation-form', {
+        detail: { source: 'hero' }
+      })
+    )
+  }
+
   return (
     <Box sx={{
       width: '100%',
@@ -42,6 +50,7 @@ function HeroSection() {
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 2, width: { xs: '100%', sm: 'auto' }, alignItems: { xs: 'center', sm: 'flex-start' } }}>
             <Button
               variant="contained"
+              onClick={openConsultationForm}
               sx={{
                 background: '#FF6600',
                 color: '#fff',

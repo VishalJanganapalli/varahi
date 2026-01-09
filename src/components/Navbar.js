@@ -26,6 +26,14 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const openConsultationForm = (source) => {
+    window.dispatchEvent(
+      new CustomEvent('open-consultation-form', {
+        detail: { source }
+      })
+    )
+  }
+
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -60,7 +68,14 @@ const Navbar = () => {
                     </MenuItem>
                   ))}
                   <MenuItem onClick={handleClose}>
-                    <Button variant="contained" sx={{ background: '#FF6600', color: '#fff', borderRadius: 2, px: 3, fontWeight: 600 }}>
+                    <Button
+                      variant="contained"
+                      onClick={() => {
+                        handleClose()
+                        openConsultationForm('navbar')
+                      }}
+                      sx={{ background: '#FF6600', color: '#fff', borderRadius: 2, px: 3, fontWeight: 600 }}
+                    >
                       Book Now
                     </Button>
                   </MenuItem>
@@ -73,7 +88,11 @@ const Navbar = () => {
                     {page.label}
                   </Button>
                 ))}
-                <Button variant="contained" sx={{ background: '#FF6600', color: '#fff', borderRadius: 2, px: 3, fontWeight: 600, ml: 2, boxShadow: 'none', '&:hover': { background: '#e65c00' } }}>
+                <Button
+                  variant="contained"
+                  onClick={() => openConsultationForm('navbar')}
+                  sx={{ background: '#FF6600', color: '#fff', borderRadius: 2, px: 3, fontWeight: 600, ml: 2, boxShadow: 'none', '&:hover': { background: '#e65c00' } }}
+                >
                   Book Now
                 </Button>
               </Box>
