@@ -512,6 +512,7 @@ const Trusted = () => {
                                     width: { xs: 300, sm: 350 },
                                     borderRadius: '12px',
                                     backgroundColor: '#fff',
+                                    
                                     border: '1px solid #f0f0f0',
                                     overflow: 'hidden'
                                 }}
@@ -537,7 +538,7 @@ const Trusted = () => {
                                     }}
                                 >
                                     <Box>
-                                        <Typography fontSize={13} fontWeight={500}>
+                                        <Typography fontSize={13} fontWeight={500} color='black'>
                                             {service.title}
                                         </Typography>
                                         <Typography
